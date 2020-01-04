@@ -1,32 +1,90 @@
-[
-  {
-    "figure": "",
-    "thumb": "",
-    "link": "",
-    "description": ""
-  },
-  {
-    "figure": "",
-    "thumb": "",
-    "link": "",
-    "description": ""
-  },
-  {
-    "figure": "",
-    "thumb": "",
-    "link": "",
-    "description": ""
-  },
-  {
-    "figure": "",
-    "thumb": "",
-    "link": "",
-    "description": ""
-  },
-  {
-    "figure": "",
-    "thumb": "",
-    "link": "",
-    "description": ""
-  }
-]
+{
+  "title": "Meus projetos",
+  "apresentation": "Essa é uma lista de projetos desenvolvidos por mim que incluem aplicações de estudo até trabalhos freelancer.",
+  "all": [
+    {
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "thumb": "",
+      "link": "https://thalysonalexr.github.io/photospace/",
+      "source": "https://github.com/thalysonalexr/photospace",
+      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
+      "title": "Photospace",
+      "spec": [
+        { "description": "Desenvolvido com JQuery" },
+        { "description": "Estilizado com CSS3" },
+        { "description": "Utiliza tags HTML5" },
+        { "description": "Font Awesome como ícones" }
+      ]
+    },
+    {
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "thumb": "",
+      "link": "https://thalysonalexr.github.io/photospace/",
+      "source": "https://github.com/thalysonalexr/photospace",
+      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
+      "title": "Photospace",
+      "spec": [
+        { "description": "Desenvolvido com JQuery" },
+        { "description": "Estilizado com CSS3" },
+        { "description": "Utiliza tags HTML5" },
+        { "description": "Font Awesome como ícones" }
+      ]
+    },
+    {
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "thumb": "",
+      "link": "https://thalysonalexr.github.io/photospace/",
+      "source": "https://github.com/thalysonalexr/photospace",
+      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
+      "title": "Photospace",
+      "spec": [
+        { "description": "Desenvolvido com JQuery" },
+        { "description": "Estilizado com CSS3" },
+        { "description": "Utiliza tags HTML5" },
+        { "description": "Font Awesome como ícones" }
+      ]
+    },
+    {
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "thumb": "",
+      "link": "https://thalysonalexr.github.io/photospace/",
+      "source": "https://github.com/thalysonalexr/photospace",
+      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
+      "title": "Photospace",
+      "spec": [
+        { "description": "Desenvolvido com JQuery" },
+        { "description": "Estilizado com CSS3" },
+        { "description": "Utiliza tags HTML5" },
+        { "description": "Font Awesome como ícones" }
+      ]
+    },
+    {
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "thumb": "",
+      "link": "https://thalysonalexr.github.io/photospace/",
+      "source": "https://github.com/thalysonalexr/photospace",
+      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
+      "title": "Photospace",
+      "spec": [
+        { "description": "Desenvolvido com JQuery" },
+        { "description": "Estilizado com CSS3" },
+        { "description": "Utiliza tags HTML5" },
+        { "description": "Font Awesome como ícones" }
+      ]
+    },
+    {
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "thumb": "",
+      "link": "https://thalysonalexr.github.io/photospace/",
+      "source": "https://github.com/thalysonalexr/photospace",
+      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
+      "title": "Photospace",
+      "spec": [
+        { "description": "Desenvolvido com JQuery" },
+        { "description": "Estilizado com CSS3" },
+        { "description": "Utiliza tags HTML5" },
+        { "description": "Font Awesome como ícones" }
+      ]
+    }
+  ]
+}

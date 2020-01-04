@@ -1,7 +1,7 @@
 # Inspiração
 
 * [Chris Dermody](https://chippd.github.io/)
-* [YEVGENIY BRIKMAN](https://chippd.github.io/)
+* [YEVGENIY BRIKMAN](https://www.ybrikman.com/)
 * [Andrew Borstein](https://andrewborstein.com/)
 
 # Tópicos
