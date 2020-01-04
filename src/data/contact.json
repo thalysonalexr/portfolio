@@ -1,0 +1,37 @@
+{
+  "title": "Tem uma ideia e quer desenvolve-la?",
+  "apresentation": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "name": "Thalyson A. Rodrigues",
+  "pages": [
+    {
+      "type": "Github",
+      "link": "https://github.com/thalysonalexr/",
+      "class": "fab fa-github-square"
+    },
+    {
+      "type": "Facebook",
+      "link": "https://www.facebook.com/thalysonalexr",
+      "class": "fab fa-facebook-square"
+    },
+    {
+      "type": "Instagram",
+      "link": "https://www.instagram.com/thalysonalexr/",
+      "class": "fab fa-instagram"
+    },
+    {
+      "type": "Twitter",
+      "link": "https://twitter.com/thalysonalexr",
+      "class": "fab fa-twitter-square"
+    },
+    {
+      "type": "Linkedin",
+      "link": "https://www.linkedin.com/in/thalysonrodrigues/",
+      "class": "fab fa-linkedin"
+    },
+    {
+      "type": "E-mail",
+      "link": "mailto:thalysonrodrigues.dev@gmail.com",
+      "class": "far fa-envelope"
+    }
+  ]
+}
