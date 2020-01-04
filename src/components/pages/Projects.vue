@@ -1,15 +1,21 @@
 <template>
-  <div>
-    <header>
-      <h1>{{ projects.title }}</h1>
-      <h2>{{ projects.apresentation }}</h2>
-    </header>
+  <div id="projects">
+    <div class="container">
+      <header class="header">
+        <h1 class="title">
+          {{ projects.title }}
+        </h1>
+        <h2 class="title">
+          {{ projects.apresentation }}
+        </h2>
+      </header>
+    </div>
     <section class="container">
       <div class="row">
         <div v-for="(project, index) in projects.all" :key="index" class="col s12 m6 l4">
-          <div class="card">
+          <div class="card medium">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" :src=project.figure>
+              <img class="activator" :alt="project.description" :src=project.figure>
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4">
@@ -84,12 +90,19 @@ export default {
   font-size: 1rem;
   text-align: justify;
   line-height: 1.2rem;
+  height: 150px;
+  overflow: hidden;
+}
+
+.card.medium .card-image{
+  height: 240px!important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-title{ color: #f57f17!important; }
 
-.card-action a{
-  margin: 0 5%;
-}
+.card-action a{ margin: 0 5%; }
 
 </style>

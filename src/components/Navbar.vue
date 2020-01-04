@@ -2,11 +2,26 @@
   <div>
     <nav class="nav-extended yellow darken-3">
       <div class="nav-wrapper">
-        <a href="/portfolio/" class="brand-logo center">portfolio.me</a>
+        <router-link
+          :to="{ path: '/portfolio/' }"
+          class="brand-logo center"
+          >
+          portfolio.me
+        </router-link>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="small material-icons">menu</i>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <router-link
+              :to="{ path: '/portfolio/' }"
+              title="Página inicial"
+              class="link-mobile"
+            >
+              <i class="inline-icon material-icons">star</i>
+              Sobre
+            </router-link>
+          </li>
           <li>
             <router-link
               :to="{ path: '/portfolio/projects' }"

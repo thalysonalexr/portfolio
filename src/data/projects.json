@@ -45,45 +45,50 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/cadtreesa.gif",
       "thumb": "",
-      "link": "https://thalysonalexr.github.io/photospace/",
-      "source": "https://github.com/thalysonalexr/photospace",
-      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
-      "title": "Photospace",
+      "link": "https://github.com/thalysonalexr/cadtreesa",
+      "source": "https://github.com/thalysonalexr/cadtreesa",
+      "description": "Projeto com a proposta de mapear árvores do Campus da UFR/MT. Visualização dos dados por meio de site e gerenciamento através de Aplicação Android construída em Delphi.",
+      "title": "Cadtreesa Project",
       "spec": [
-        { "description": "Desenvolvido com JQuery" },
-        { "description": "Estilizado com CSS3" },
-        { "description": "Utiliza tags HTML5" },
-        { "description": "Font Awesome como ícones" }
+        { "description": "Aplicativo Android em Delphi" },
+        { "description": "Site criado em PHP, HTML5, CSS3, JS" },
+        { "description": "Utiliza as libs JQuery e Bootstrap" },
+        { "description": "Armazenamento de dados com MySQL" },
+        { "description": "Integração com Google Maps API" }
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/freestylesheets.png",
       "thumb": "",
-      "link": "https://thalysonalexr.github.io/photospace/",
-      "source": "https://github.com/thalysonalexr/photospace",
-      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
-      "title": "Photospace",
+      "link": "https://github.com/thalysonalexr/freestylesheets",
+      "source": "https://github.com/thalysonalexr/freestylesheets",
+      "description": "REST API com proposta de gerenciar dados de Folhas de Estilo Cascata (CSS) entre aplicações que necessitem do uso. Inspirado em Google Fonts API.",
+      "title": "Freestylesheets API",
       "spec": [
-        { "description": "Desenvolvido com JQuery" },
-        { "description": "Estilizado com CSS3" },
-        { "description": "Utiliza tags HTML5" },
-        { "description": "Font Awesome como ícones" }
+        { "description": "Usa Zend Expressive Skeleton" },
+        { "description": "API 100% PHP" },
+        { "description": "Respostas JSON, XML, HTML e text/css" },
+        { "description": "Consome Middlewares PSR-15" },
+        { "description": "Desenvolvimento com Docker e Docker-compose" },
+        { "description": "Base de Dados MySQL" }
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/portfolio.png",
       "thumb": "",
-      "link": "https://thalysonalexr.github.io/photospace/",
-      "source": "https://github.com/thalysonalexr/photospace",
-      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
-      "title": "Photospace",
+      "link": "https://thalysonalexr.github.io/portfolio/",
+      "source": "https://github.com/thalysonalexr/portfolio",
+      "description": "REST API com proposta de gerenciar dados de Folhas de Estilo Cascata (CSS) entre aplicações que necessitem do uso. Inspirado em Google Fonts API.",
+      "title": "Freestylesheets API",
       "spec": [
-        { "description": "Desenvolvido com JQuery" },
-        { "description": "Estilizado com CSS3" },
-        { "description": "Utiliza tags HTML5" },
-        { "description": "Font Awesome como ícones" }
+        { "description": "Usa Zend Expressive Skeleton" },
+        { "description": "API 100% PHP" },
+        { "description": "Respostas JSON, XML, HTML e text/css" },
+        { "description": "Consome Middlewares PSR-15" },
+        { "description": "Desenvolvimento com Docker e Docker-compose" },
+        { "description": "Base de Dados MySQL" }
       ]
     }
   ]
