@@ -17,31 +17,31 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/star-rate-component.gif",
       "thumb": "",
-      "link": "https://thalysonalexr.github.io/photospace/",
-      "source": "https://github.com/thalysonalexr/photospace",
-      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
-      "title": "Photospace",
+      "link": "https://www.npmjs.com/package/star-rate-component",
+      "source": "https://github.com/thalysonalexr/star-rate-component",
+      "description": "Componente de avaliação por estrelas para aplicações construídas com o Framework Vue.js.",
+      "title": "Star Rate Component",
       "spec": [
-        { "description": "Desenvolvido com JQuery" },
-        { "description": "Estilizado com CSS3" },
-        { "description": "Utiliza tags HTML5" },
-        { "description": "Font Awesome como ícones" }
+        { "description": "Desenvolvido com Vue.Js" },
+        { "description": "Faz uso de JQuery" },
+        { "description": "Componente para Vue.js" },
+        { "description": "Exportado para NPM" }
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/tic-tac-toe.png",
       "thumb": "",
-      "link": "https://thalysonalexr.github.io/photospace/",
-      "source": "https://github.com/thalysonalexr/photospace",
-      "description": "Projeto desenvolvido durante o Bacharel em SI. A proposta deste é ser um template funcional frontend para sites editores de fotos.",
-      "title": "Photospace",
+      "link": "https://github.com/thalysonalexr/tic-tac-toe",
+      "source": "https://github.com/thalysonalexr/tic-tac-toe",
+      "description": "Mini game Jogo da Velha escrito em Python com interface nativa Tkinter.",
+      "title": "Tic-Tac-Toe",
       "spec": [
-        { "description": "Desenvolvido com JQuery" },
-        { "description": "Estilizado com CSS3" },
-        { "description": "Utiliza tags HTML5" },
-        { "description": "Font Awesome como ícones" }
+        { "description": "Desenvolvido com Python 3.6.3" },
+        { "description": "Armazenamento de dados com Sqlite3" },
+        { "description": "Interface nativa com a lib Tkinter" },
+        { "description": "Implementação do Algoritmo MiniMax (vs IA)" }
       ]
     },
     {
