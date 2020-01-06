@@ -2,18 +2,18 @@
   <div id="projects">
     <div class="container">
       <header class="header">
-        <h1 class="title">
+        <h1 class="title yellow darken-4 white-text z-depth-3">
           {{ projects.title }}
         </h1>
-        <h2 class="title">
+        <blockquote class="title grey z-depth-3 lighten-5">
           {{ projects.apresentation }}
-        </h2>
+        </blockquote>
       </header>
     </div>
     <section class="container">
       <div class="row">
         <div v-for="(project, index) in projects.all" :key="index" class="col s12 m6 l4">
-          <div class="card medium">
+          <div class="card medium hoverable">
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator" :alt="project.description" :src=project.figure>
             </div>
@@ -22,7 +22,7 @@
                 {{ project.title }}
                 <i class="material-icons right">more_vert</i>
               </span>
-              <p>{{ project.description }}</p>
+              <p class="open-sans">{{ project.description }}</p>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Especificações
@@ -79,6 +79,17 @@ export default {
 
 <style scoped>
 
+.title{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  padding: 3%;
+}
+
+h1.title{
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
 .specs{ padding: 5%; }
 
 .specs li{
@@ -95,7 +106,7 @@ export default {
 }
 
 .card.medium .card-image{
-  height: 240px!important;
+  height: 200px!important;
   display: flex;
   justify-content: center;
   align-items: center;

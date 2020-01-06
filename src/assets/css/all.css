@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Nixie+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.nixie-one{ font-family: 'Nixie One', cursive; }
+
+.ibarra-real-nova{ font-family: 'Ibarra Real Nova', serif; }
+
+.playfair-display{ font-family: 'Playfair Display', serif; }
+
+.quicksand{ font-family: 'Quicksand', sans-serif; }
+
+.dancing-script{ font-family: 'Dancing Script', cursive; }
+
+.open-sans{ font-family: 'Open Sans', sans-serif; }

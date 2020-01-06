@@ -1,32 +1,111 @@
-[
-  {
-    "group": "JavaScript",
-    "tools": [
-      {
-        "name": "Vue.Js",
-        "figure": ""
-      },
-      {
-        "name": "JQuery",
-        "figure": ""
-      }
-    ]
-  },
-  {
-    "group": "Back-End",
-    "tools": [
-      {
-        "name": "PHP",
-        "figure": ""
-      },
-      {
-        "name": "Python",
-        "figure": ""
-      },
-      {
-        "name": "MySQL",
-        "figure": ""
-      }
-    ]
-  }
-]
+{
+  "title": "",
+  "apresentation": "",
+  "all": [
+    {
+      "group": "JavaScript",
+      "tools": [
+        {
+          "name": "Vue.Js",
+          "figure": ""
+        },
+        {
+          "name": "JQuery",
+          "figure": ""
+        },
+        {
+          "name": "ECMAScript 6",
+          "figure": ""
+        }
+      ]
+    },
+    {
+      "group": "Back-End",
+      "tools": [
+        {
+          "name": "PHP",
+          "figure": ""
+        },
+        {
+          "name": "Python",
+          "figure": ""
+        },
+        {
+          "name": "MySQL",
+          "figure": ""
+        },
+        {
+          "name": "Delphi",
+          "figure": ""
+        },
+        {
+          "name": "Oracle XE",
+          "figure": ""
+        }
+      ]
+    },
+    {
+      "group": "Integração de API's",
+      "tools": [
+        {
+          "name": "Paypal",
+          "figure": ""
+        },
+        {
+          "name": "Mercado Pago",
+          "figure": ""
+        },
+        {
+          "name": "PagSeguro",
+          "figure": ""
+        },
+        {
+          "name": "Google Maps",
+          "figure": ""
+        },
+        {
+          "name": "Google Analytics",
+          "figure": ""
+        },
+        {
+          "name": "Oauth2 Facebook",
+          "figure": ""
+        },
+        {
+          "name": "Oauth2 Google",
+          "figure": ""
+        }
+      ]
+    },
+    {
+      "group": "Integração de Gráficos",
+      "tools": [
+        {
+          "name": "Chart.js",
+          "figure": ""
+        }
+      ]
+    },
+    {
+      "group": "Outros",
+      "tools": [
+        {
+          "name": "Git",
+          "figure": ""
+        },
+        {
+          "name": "Nginx",
+          "figure": ""
+        },
+        {
+          "name": "Docker",
+          "figure": ""
+        },
+        {
+          "name": "Linux",
+          "figure": ""
+        }
+      ]
+    }
+  ]
+}

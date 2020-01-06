@@ -10,7 +10,7 @@
             </p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Contato</h5>
+            <h5 class="white-text">Contate-me</h5>
             <ul class="links-contact">
               <li v-for="(page, index) in contact.pages" :key="index">
                 <a

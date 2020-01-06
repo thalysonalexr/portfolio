@@ -1,7 +1,7 @@
 <template>
   <div id="about" class="container">
     <div class="skew bg-home">
-      <figure class="figure-perfil">
+      <figure class="figure-perfil z-depth-5">
         <img class="picture" :src="about.figure" alt="">
       </figure>
       <header class="header">
@@ -15,9 +15,9 @@
       </header>
     </div>
     <section class="container bio">
-      <h3 class="font-open-sans title title-about">Sobre mim</h3>
+      <h3 class="open-sans title title-about">Sobre mim</h3>
       <article>
-        <p class="font-open-sans">{{ about.about_me }}</p>
+        <p class="open-sans">{{ about.about_me }}</p>
       </article>
     </section>
   </div>
@@ -40,25 +40,6 @@ export default {
 </script>
 
 <style scoped>
-
-@import url('https://fonts.googleapis.com/css?family=Nixie+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-.nixie-one{ font-family: 'Nixie One', cursive; }
-
-.ibarra-real-nova{ font-family: 'Ibarra Real Nova', serif; }
-
-.playfair-display{ font-family: 'Playfair Display', serif; }
-
-.quicksand{ font-family: 'Quicksand', sans-serif; }
-
-.dancing-script{ font-family: 'Dancing Script', cursive; }
-
-.font-open-sans{ font-family: 'Open Sans', sans-serif; }
 
 #about{
   min-width: 100%;
