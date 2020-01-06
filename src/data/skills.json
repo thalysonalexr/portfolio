@@ -3,6 +3,36 @@
   "apresentation": "",
   "all": [
     {
+      "group": "HTML",
+      "tools": [
+        {
+          "name": "HTML5",
+          "figure": ""
+        },
+        {
+          "name": "Twig",
+          "figure": ""
+        }
+      ]
+    },
+    {
+      "group": "CSS",
+      "tools": [
+        {
+          "name": "CSS3",
+          "figure": ""
+        },
+        {
+          "name": "Bootstrap",
+          "figure": ""
+        },
+        {
+          "name": "Materialize",
+          "figure": ""
+        }
+      ]
+    },
+    {
       "group": "JavaScript",
       "tools": [
         {

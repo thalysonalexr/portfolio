@@ -86,6 +86,12 @@ export default {
     $(document).ready(function () {
       // eslint-disable-next-line
       $('.sidenav').sidenav()
+      // eslint-disable-next-line
+      $('.link-mobile').click(function () {
+        // eslint-disable-next-line
+        let instance = M.Sidenav.getInstance($('.sidenav'));
+        instance.close()
+      })
     })
   }
 }

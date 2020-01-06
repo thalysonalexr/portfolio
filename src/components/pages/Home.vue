@@ -14,7 +14,7 @@
         </h2>
       </header>
     </div>
-    <section class="container bio">
+    <section class="bio">
       <div class="skew-2 about-me grey lighten-5 z-depth-3">
         <h3 class="title title-about">Sobre mim</h3>
         <article>
