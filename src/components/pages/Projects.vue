@@ -2,7 +2,7 @@
   <div id="projects">
     <div class="container">
       <header class="header">
-        <h1 class="title yellow darken-4 white-text z-depth-3">
+        <h1 class="title yellow darken-3 white-text z-depth-3">
           {{ projects.title }}
         </h1>
         <blockquote class="title grey z-depth-3 lighten-5">
@@ -22,7 +22,7 @@
                 {{ project.title }}
                 <i class="material-icons right">more_vert</i>
               </span>
-              <p class="open-sans">{{ project.description }}</p>
+              <p class="desc">{{ project.description }}</p>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">Especificações
@@ -62,14 +62,14 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Projects',
   computed: {
     ...mapGetters(['projects'])
   },
   methods: {
-    ...mapMutations(['loadProjects'])
+    ...mapActions(['loadProjects'])
   },
   created () {
     this.loadProjects()
@@ -80,15 +80,17 @@ export default {
 <style scoped>
 
 .title{
-  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   padding: 3%;
+  text-align: left;
 }
 
 h1.title{
   text-transform: uppercase;
   font-size: 2.5rem;
 }
+
+.desc{ font-weight: 300; }
 
 .specs{ padding: 5%; }
 

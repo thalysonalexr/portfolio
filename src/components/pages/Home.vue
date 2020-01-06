@@ -15,10 +15,12 @@
       </header>
     </div>
     <section class="container bio">
-      <h3 class="open-sans title title-about">Sobre mim</h3>
-      <article>
-        <p class="open-sans">{{ about.about_me }}</p>
-      </article>
+      <div class="skew-2 about-me grey lighten-5 z-depth-3">
+        <h3 class="title title-about">Sobre mim</h3>
+        <article>
+          <p class="desc">{{ about.about_me }}</p>
+        </article>
+      </div>
     </section>
   </div>
 </template>
@@ -50,6 +52,8 @@ export default {
   background-repeat: no-repeat;
   padding: 0 5%;
 }
+
+.desc{ font-weight: 300!important; }
 
 .figure-perfil{
   margin: auto;
@@ -90,6 +94,8 @@ h2.title{
   font-weight: 100;
 }
 
+.about-me{ padding: 3%; }
+
 .bio article p{
   text-align: justify;
   color: #4A4E69 !important;
@@ -120,10 +126,16 @@ h2.title{
   }
 }
 
-.skew {
-  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 96%, 0% 100%);
-  -ms-clip-path: polygon(0 0%, 100% 0%, 100% 96%, 0% 100%);
-  clip-path: polygon(0 0%, 100% 0%, 100% 96%, 0% 100%);
+.skew{
+  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+  -ms-clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+}
+
+.skew-2{
+  -ms-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+  clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 }
 
 .bg-home{

@@ -24,7 +24,7 @@ export default {
       isLoading: true
     }
   },
-  mounted () {
+  created () {
     let self = this
     setTimeout(function () {
       self.isLoading = false
