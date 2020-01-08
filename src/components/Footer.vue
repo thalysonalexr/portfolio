@@ -15,7 +15,7 @@
               <li v-for="(page, index) in contact.pages" :key="index">
                 <a
                   class="grey-text text-lighten-3"
-                  :href="page.link"
+                  :href="page.type === 'Whatsapp' ? sendWhatsapp(page.link) : page.link"
                   target="_blank"
                   rel="noopener"
                   :title="page.type"
@@ -41,6 +41,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { sendMessageWhatsapp } from '../http/services'
 import { getDocumentLanguage } from '../helpers/index'
 export default {
   name: 'Footer',
@@ -53,6 +54,9 @@ export default {
     ...mapGetters(['contact'])
   },
   methods: {
+    sendWhatsapp (to) {
+      return sendMessageWhatsapp(to, 'Hello')
+    },
     ...mapActions(['loadContact']),
     goBegin () {
       // eslint-disable-next-line

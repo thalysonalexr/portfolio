@@ -11,6 +11,8 @@ const http = axios.create({
   }
 })
 
+const uriWhatsappSendMessage = process.env.WHATSAPP_API + '/send'
+
 Vue.use(http)
 
-export { http, uriBase }
+export { http, uriBase, uriWhatsappSendMessage }
