@@ -6,6 +6,7 @@
 import { pleaseWait } from 'please-wait'
 import 'please-wait/build/please-wait.css'
 import 'spinkit/spinkit.min.css'
+import { getDocumentLanguage } from '../helpers/index'
 export default {
   name: 'Loading',
   props: ['isLoading'],
@@ -32,12 +33,13 @@ export default {
         ]
 
         let logo = logos[Math.floor(Math.random() * (logos.length - 0)) + 0]
+        let loadingMessage = getDocumentLanguage() === 'pt-BR' ? 'Aguarde. A página esta sendo carregada...' : 'Wait. The page is loading...'
 
         this.pleaseWaitInstance = pleaseWait({
           logo: logo,
           backgroundColor: '#f57f17',
           loadingHtml: `
-          <p class="loading-message">Aguarde enquanto a página é carregada...</p>
+          <p class="loading-message">${loadingMessage}</p>
           <div class="sk-chase">
             <div class="sk-chase-dot"></div>
             <div class="sk-chase-dot"></div>

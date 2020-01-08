@@ -20,7 +20,8 @@
               <p class="desc">{{ project.description }}</p>
             </div>
             <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">Especificações
+              <span class="card-title grey-text text-darken-4">
+                {{ language === 'pt-BR' ? 'Especificações' : 'Specifications' }}
                 <i class="material-icons right">close</i>
               </span>
               <ul class="specs">
@@ -34,7 +35,7 @@
                   class="btn-floating btn-large waves-effect waves-light yellow darken-4 tooltipped"
                   target="_blank"
                   rel="noopener"
-                  :title='"Visitar " + project.title'
+                  :title="(language === 'pt-BR' ? 'Visitar ' : 'Visit ') + project.title"
                 >
                   <i class="fa fa-external-link"></i>
                 </a>
@@ -43,7 +44,7 @@
                   class="btn-floating btn-large waves-effect waves-light yellow darken-4 tooltipped"
                   target="_blank"
                   rel="noopener"
-                  title="Ir para repositório do Projeto"
+                  :title="language === 'pt-BR' ? 'Ir para repositório do Projeto' : 'Go to repository of project'"
                 >
                   <i class="fab fa-github"></i>
                 </a>
@@ -59,8 +60,14 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Header from '../Header'
+import { getDocumentLanguage } from '../../helpers/index'
 export default {
   name: 'Projects',
+  data () {
+    return {
+      language: null
+    }
+  },
   components: {
     'v-header': Header
   },
@@ -71,6 +78,7 @@ export default {
     ...mapActions(['loadProjects'])
   },
   created () {
+    this.language = getDocumentLanguage()
     this.loadProjects()
   }
 }

@@ -15,26 +15,26 @@
           <li>
             <router-link
               :to="{ path: '/portfolio/' }"
-              title="Página inicial"
+              :title="language === 'pt-BR' ? 'Página inicial' : 'Home page'"
               class="link-mobile"
             >
               <i class="inline-icon material-icons">star</i>
-              Sobre
+              {{ language === 'pt-BR' ? 'Sobre mim' : 'About me' }}
             </router-link>
           </li>
           <li>
             <router-link
               :to="{ path: '/portfolio/projects' }"
-              title="Projetos desenvolvidos"
+              :title="language === 'pt-BR' ? 'Projetos desenvolvidos' : 'Developed projects'"
             >
               <i class="inline-icon material-icons">work</i>
-              Projetos
+              {{ language === 'pt-BR' ? 'Projetos' : 'Projects' }}
             </router-link>
           </li>
           <li>
             <router-link
               :to="{ path: '/portfolio/skills' }"
-              title="Habilidades/Ferramentas"
+              :title="language === 'pt-BR' ? 'Habilidades/ferramentas' : 'Skills/tools'"
             >
               <i class="inline-icon material-icons">code</i>
               Skills
@@ -42,12 +42,12 @@
           </li>
           <li>
             <a
-              title="Contato"
+              :title="language === 'pt-BR' ? 'Contato' : 'Contact'"
               class="link-mobile"
               @click="goEnd()"
             >
               <i class="inline-icon material-icons">email</i>
-              Contato
+              {{ language === 'pt-BR' ? 'Contato' : 'Contact' }}
             </a>
           </li>
         </ul>
@@ -57,27 +57,27 @@
       <li>
         <router-link
           :to="{ path: '/portfolio/' }"
-          title="Página inicial"
+          :title="language === 'pt-BR' ? 'Página inicial' : 'Home page'"
           class="link-mobile"
         >
           <i class="inline-icon material-icons">star</i>
-          Sobre
+          {{ language === 'pt-BR' ? 'Sobre mim' : 'About me' }}
         </router-link>
       </li>
       <li>
         <router-link
           :to="{ path: '/portfolio/projects' }"
-          title="Projetos desenvolvidos"
+          :title="language === 'pt-BR' ? 'Projetos desenvolvidos' : 'Developed projects'"
           class="link-mobile"
         >
           <i class="inline-icon material-icons">work</i>
-          Projetos
+          {{ language === 'pt-BR' ? 'Projetos' : 'Projects' }}
         </router-link>
       </li>
       <li>
         <router-link
           :to="{ path: '/portfolio/skills' }"
-          title="Habilidades/Ferramentas"
+          :title="language === 'pt-BR' ? 'Habilidades/ferramentas' : 'Skills/tools'"
           class="link-mobile"
         >
           <i class="inline-icon material-icons">code</i>
@@ -86,12 +86,12 @@
       </li>
       <li>
         <a
-          title="Contato"
+          :title="language === 'pt-BR' ? 'Contato' : 'Contact'"
           class="link-mobile"
           @click="goEnd()"
         >
           <i class="inline-icon material-icons">email</i>
-          Contato
+          {{ language === 'pt-BR' ? 'Contato' : 'Contact' }}
         </a>
       </li>
     </ul>
@@ -99,8 +99,14 @@
 </template>
 
 <script>
+import { getDocumentLanguage } from '../helpers/index'
 export default {
   name: 'Navbar',
+  data () {
+    return {
+      language: null
+    }
+  },
   methods: {
     goEnd () {
       // eslint-disable-next-line
@@ -111,6 +117,7 @@ export default {
     }
   },
   created () {
+    this.language = getDocumentLanguage()
     // eslint-disable-next-line
     $(document).ready(function () {
       // eslint-disable-next-line

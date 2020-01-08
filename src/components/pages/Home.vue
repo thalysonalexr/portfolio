@@ -16,7 +16,9 @@
     </div>
     <section class="bio">
       <div class="skew-2 about-me grey lighten-5 z-depth-3">
-        <h3 class="title title-about">Sobre mim</h3>
+        <h3 class="title title-about">
+          {{ language === 'pt-BR' ? 'Sobre mim' : 'About me' }}
+        </h3>
         <article>
           <p class="desc">{{ about.about_me }}</p>
         </article>
@@ -27,8 +29,14 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { getDocumentLanguage } from '../../helpers/index'
 export default {
   name: 'Home',
+  data () {
+    return {
+      language: null
+    }
+  },
   computed: {
     ...mapGetters(['about'])
   },
@@ -36,6 +44,7 @@ export default {
     ...mapActions(['loadAbout'])
   },
   created () {
+    this.language = getDocumentLanguage
     this.loadAbout()
   }
 }

@@ -10,7 +10,7 @@
             </p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Contate-me</h5>
+            <h5 class="white-text">{{ language === 'pt-BR' ? 'Contate-me' : 'Contact me' }}</h5>
             <ul class="links-contact">
               <li v-for="(page, index) in contact.pages" :key="index">
                 <a
@@ -41,8 +41,14 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { getDocumentLanguage } from '../helpers/index'
 export default {
   name: 'Footer',
+  data () {
+    return {
+      language: null
+    }
+  },
   computed: {
     ...mapGetters(['contact'])
   },
@@ -56,6 +62,7 @@ export default {
     }
   },
   created () {
+    this.language = getDocumentLanguage()
     this.loadContact()
   }
 }
