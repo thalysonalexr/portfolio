@@ -13,6 +13,7 @@
     "deploy -f": "npm run build; push-dir --dir=dist --branch=gh-pages --cleanup --force"
   },
   "dependencies": {
+    "axios": "^0.19.1",
     "jquery": "^3.4.1",
     "material-icons": "^0.3.1",
     "materialize-css": "^1.0.0",

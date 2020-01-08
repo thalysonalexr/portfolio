@@ -1,5 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import {
+  listAbout,
+  listProjects,
+  listSkills,
+  listContact
+} from '../http/services'
 
 Vue.use(Vuex)
 
@@ -11,17 +17,17 @@ const store = new Vuex.Store({
     skills: []
   },
   mutations: {
-    loadAbout: state => {
-      state.about = require('../data/about.json')
+    loadAbout: (state, payload) => {
+      state.about = payload
     },
-    loadProjects: state => {
-      state.projects = require('../data/projects.json')
+    loadProjects: (state, payload) => {
+      state.projects = payload
     },
-    loadSkills: state => {
-      state.skills = require('../data/skills.json')
+    loadSkills: (state, payload) => {
+      state.skills = payload
     },
-    loadContact: state => {
-      state.contact = require('../data/contact.json')
+    loadContact: (state, payload) => {
+      state.contact = payload
     }
   },
   getters: {
@@ -31,10 +37,22 @@ const store = new Vuex.Store({
     skills: state => state.skills
   },
   actions: {
-    loadAbout: ({ commit }) => commit('loadAbout'),
-    loadProjects: ({ commit }) => commit('loadProjects'),
-    loadSkills: ({ commit }) => commit('loadSkills'),
-    loadContact: ({ commit }) => commit('loadContact')
+    loadAbout: async ({ commit }) => {
+      let response = await listAbout()
+      commit('loadAbout', response.data)
+    },
+    loadProjects: async ({ commit }) => {
+      let response = await listProjects()
+      commit('loadProjects', response.data)
+    },
+    loadSkills: async ({ commit }) => {
+      let response = await listSkills()
+      commit('loadSkills', response.data)
+    },
+    loadContact: async ({ commit }) => {
+      let response = await listContact()
+      commit('loadContact', response.data)
+    }
   }
 })
 
