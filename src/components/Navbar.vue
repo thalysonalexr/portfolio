@@ -4,6 +4,7 @@
       <div class="nav-wrapper">
         <router-link
           :to="{ path: '/portfolio/' }"
+          title="portfolio.me"
           class="brand-logo center"
           >
           portfolio.me
@@ -134,9 +135,11 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
 
 .brand-logo{
   font-size: 2rem;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .small{ font-size: 3rem!important; }

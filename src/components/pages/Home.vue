@@ -44,7 +44,7 @@ export default {
     ...mapActions(['loadAbout'])
   },
   created () {
-    this.language = getDocumentLanguage
+    this.language = getDocumentLanguage()
     this.loadAbout()
   }
 }
