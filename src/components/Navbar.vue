@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="navbar">
     <nav class="nav-extended yellow darken-3">
       <div class="nav-wrapper">
         <router-link
@@ -40,6 +40,16 @@
               Skills
             </router-link>
           </li>
+          <li>
+            <a
+              title="Contato"
+              class="link-mobile"
+              @click="goEnd()"
+            >
+              <i class="inline-icon material-icons">email</i>
+              Contato
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -74,6 +84,16 @@
           Skills
         </router-link>
       </li>
+      <li>
+        <a
+          title="Contato"
+          class="link-mobile"
+          @click="goEnd()"
+        >
+          <i class="inline-icon material-icons">email</i>
+          Contato
+        </a>
+      </li>
     </ul>
   </div>
 </template>
@@ -81,6 +101,15 @@
 <script>
 export default {
   name: 'Navbar',
+  methods: {
+    goEnd () {
+      // eslint-disable-next-line
+      $('html, body').animate({
+        // eslint-disable-next-line
+        scrollTop: $(document).height()
+      }, 500)
+    }
+  },
   created () {
     // eslint-disable-next-line
     $(document).ready(function () {

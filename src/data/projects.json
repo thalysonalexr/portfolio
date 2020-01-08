@@ -1,9 +1,9 @@
 {
-  "title": "Meus projetos",
+  "title": "Projetos",
   "apresentation": "Essa é uma lista de projetos desenvolvidos por mim que incluem aplicações de estudo até trabalhos freelancer.",
   "all": [
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/photospace.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/photospace.png",
       "thumb": "",
       "link": "https://thalysonalexr.github.io/photospace/",
       "source": "https://github.com/thalysonalexr/photospace",
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/portfolio.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/portfolio.png",
       "thumb": "",
       "link": "https://thalysonalexr.github.io/portfolio/",
       "source": "https://github.com/thalysonalexr/portfolio",
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/criarcurriculo.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/criarcurriculo.png",
       "thumb": "",
       "link": "https://gitlab.com/thalysonrodss/curriculum.io",
       "source": "https://gitlab.com/thalysonrodss/curriculum.io",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/freestylesheets.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/freestylesheets.png",
       "thumb": "",
       "link": "https://github.com/thalysonalexr/freestylesheets",
       "source": "https://github.com/thalysonalexr/freestylesheets",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/cadtreesa.gif",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/cadtreesa.gif",
       "thumb": "",
       "link": "https://github.com/thalysonalexr/cadtreesa",
       "source": "https://github.com/thalysonalexr/cadtreesa",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/stikers.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/stikers.png",
       "thumb": "",
       "link": "https://gitlab.com/thalysonrodss/swap-cards",
       "source": "https://gitlab.com/thalysonrodss/swap-cards",
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/star-rate-component.gif",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/star-rate-component.gif",
       "thumb": "",
       "link": "https://www.npmjs.com/package/star-rate-component",
       "source": "https://github.com/thalysonalexr/star-rate-component",
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "figure": "https://raw.githubusercontent.com/thalysonalexr/screenshot-projects/master/images/tic-tac-toe.png",
+      "figure": "https://raw.githubusercontent.com/thalysonalexr/portfolio-files/master/dest/projects/tic-tac-toe.png",
       "thumb": "",
       "link": "https://github.com/thalysonalexr/tic-tac-toe",
       "source": "https://github.com/thalysonalexr/tic-tac-toe",

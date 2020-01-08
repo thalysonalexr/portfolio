@@ -61,7 +61,6 @@ export default {
 .loading-message {
   color: white!important;
   font-size: 1.5rem;
-  text-shadow: 1px 2px 2px #404040;
 }
 
 div.sk-chase{
@@ -77,7 +76,8 @@ div.sk-chase{
   width: 350px;
   border-radius: 350px;
   border: 10px solid #fcfcfc;
-  box-shadow: 1px 2px 2px #404040;
+  -webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
 }
 
 </style>

@@ -1,15 +1,10 @@
 <template>
   <div id="projects">
-    <div class="container">
-      <header class="header">
-        <h1 class="title yellow darken-3 white-text z-depth-3">
-          {{ projects.title }}
-        </h1>
-        <blockquote class="title grey z-depth-3 lighten-5">
-          {{ projects.apresentation }}
-        </blockquote>
-      </header>
-    </div>
+    <v-header
+      :title="projects.title"
+      :apresentation="projects.apresentation"
+    >
+    </v-header>
     <section class="container">
       <div class="row">
         <div v-for="(project, index) in projects.all" :key="index" class="col s12 m6 l4">
@@ -63,8 +58,12 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import Header from '../Header'
 export default {
   name: 'Projects',
+  components: {
+    'v-header': Header
+  },
   computed: {
     ...mapGetters(['projects'])
   },
@@ -78,17 +77,6 @@ export default {
 </script>
 
 <style scoped>
-
-.title{
-  font-weight: 100;
-  padding: 3%;
-  text-align: left;
-}
-
-h1.title{
-  text-transform: uppercase;
-  font-size: 2.5rem;
-}
 
 .desc{ font-weight: 300; }
 

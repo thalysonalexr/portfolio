@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="footer">
     <footer class="page-footer yellow darken-3 skew">
       <div class="container">
         <div class="row">

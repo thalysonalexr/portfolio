@@ -1,7 +1,7 @@
 <template>
   <div id="about" class="container">
     <div class="skew bg-home">
-      <figure class="figure-perfil z-depth-5">
+      <figure class="figure-perfil">
         <img class="picture" :src="about.figure" alt="">
       </figure>
       <header class="header">
@@ -94,7 +94,10 @@ h2.title{
   font-weight: 100;
 }
 
-.about-me{ padding: 3%; }
+.about-me{
+  padding: 5%;
+  box-shadow: 3px 3px 4px 4px #4A4E69;
+}
 
 .bio article p{
   text-align: justify;
@@ -140,7 +143,7 @@ h2.title{
 
 .bg-home{
   padding: 3%;
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/bg.png');
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/dest/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
