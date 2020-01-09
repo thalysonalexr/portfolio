@@ -59,8 +59,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import Header from '../Header'
-import { getDocumentLanguage } from '../../helpers/index'
+import Header from '../../Header'
+import { getDocumentLanguage } from '../../../helpers/index'
 export default {
   name: 'Projects',
   data () {

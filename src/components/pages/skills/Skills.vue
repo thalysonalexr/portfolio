@@ -28,7 +28,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import Header from '../Header'
+import Header from '../../Header'
 export default {
   name: 'Skills',
   components: {

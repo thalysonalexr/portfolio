@@ -5,7 +5,7 @@ import {
   listProjects,
   listSkills,
   listContact
-} from '../http/services'
+} from '@/http/services'
 
 Vue.use(Vuex)
 

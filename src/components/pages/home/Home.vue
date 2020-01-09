@@ -29,7 +29,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import { getDocumentLanguage } from '../../helpers/index'
+import { getDocumentLanguage } from '../../../helpers/index'
 export default {
   name: 'Home',
   data () {
@@ -152,7 +152,7 @@ h2.title{
 
 .bg-home{
   padding: 3%;
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/dest/bg.png');
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../../assets/images/dest/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
