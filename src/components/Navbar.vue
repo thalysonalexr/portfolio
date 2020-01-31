@@ -5,50 +5,59 @@
         <router-link
           :to="{ path: '/portfolio/' }"
           title="portfolio.me"
-          class="brand-logo center"
-          >
+          class="brand-logo center">
           portfolio.me
         </router-link>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-          <i class="small material-icons">menu</i>
+        <a href="#"
+          data-target="mobile-demo"
+          class="sidenav-trigger">
+          <i class="small material-icons">
+            menu
+          </i>
         </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul
+          id="nav-mobile"
+          class="right hide-on-med-and-down">
           <li>
             <router-link
               :to="{ path: '/portfolio/' }"
-              :title="language === 'pt-BR' ? 'Página inicial' : 'Home page'"
-              class="link-mobile"
-            >
-              <i class="inline-icon material-icons">star</i>
-              {{ language === 'pt-BR' ? 'Sobre mim' : 'About me' }}
+              :title="nav[lang].home"
+              class="link-mobile">
+              <i class="inline-icon material-icons">
+                star
+              </i>
+              {{ nav[lang].home }}
             </router-link>
           </li>
           <li>
             <router-link
               :to="{ path: '/portfolio/projects' }"
-              :title="language === 'pt-BR' ? 'Projetos desenvolvidos' : 'Developed projects'"
-            >
-              <i class="inline-icon material-icons">work</i>
-              {{ language === 'pt-BR' ? 'Projetos' : 'Projects' }}
+              :title="nav[lang].projects">
+              <i class="inline-icon material-icons">
+                work
+              </i>
+              {{ nav[lang].projects }}
             </router-link>
           </li>
           <li>
             <router-link
               :to="{ path: '/portfolio/skills' }"
-              :title="language === 'pt-BR' ? 'Habilidades/ferramentas' : 'Skills/tools'"
-            >
-              <i class="inline-icon material-icons">code</i>
-              Skills
+              :title="nav[lang].skills">
+              <i class="inline-icon material-icons">
+                code
+              </i>
+              {{ nav[lang].skills }}
             </router-link>
           </li>
           <li>
             <a
-              :title="language === 'pt-BR' ? 'Contato' : 'Contact'"
+              :title="nav[lang].contact"
               class="link-mobile"
-              @click="goEnd()"
-            >
-              <i class="inline-icon material-icons">email</i>
-              {{ language === 'pt-BR' ? 'Contato' : 'Contact' }}
+              @click="goEnd()">
+              <i class="inline-icon material-icons">
+                email
+              </i>
+              {{ nav[lang].contact }}
             </a>
           </li>
         </ul>
@@ -58,41 +67,43 @@
       <li>
         <router-link
           :to="{ path: '/portfolio/' }"
-          :title="language === 'pt-BR' ? 'Página inicial' : 'Home page'"
-          class="link-mobile"
-        >
-          <i class="inline-icon material-icons">star</i>
-          {{ language === 'pt-BR' ? 'Sobre mim' : 'About me' }}
+          :title="nav[lang].home"
+          class="link-mobile">
+          <i class="inline-icon material-icons">
+            star
+          </i>
+          {{ nav[lang].home }}
         </router-link>
       </li>
       <li>
         <router-link
           :to="{ path: '/portfolio/projects' }"
-          :title="language === 'pt-BR' ? 'Projetos desenvolvidos' : 'Developed projects'"
-          class="link-mobile"
-        >
-          <i class="inline-icon material-icons">work</i>
-          {{ language === 'pt-BR' ? 'Projetos' : 'Projects' }}
+          :title="nav[lang].projects"
+          class="link-mobile">
+          <i class="inline-icon material-icons">
+            work
+          </i>
+          {{ nav[lang].projects }}
         </router-link>
       </li>
       <li>
         <router-link
           :to="{ path: '/portfolio/skills' }"
-          :title="language === 'pt-BR' ? 'Habilidades/ferramentas' : 'Skills/tools'"
-          class="link-mobile"
-        >
-          <i class="inline-icon material-icons">code</i>
-          Skills
+          :title="nav[lang].skills"
+          class="link-mobile">
+          <i class="inline-icon material-icons">
+            code
+          </i>
+          {{ nav[lang].skills }}
         </router-link>
       </li>
       <li>
         <a
-          :title="language === 'pt-BR' ? 'Contato' : 'Contact'"
+          :title="nav[lang].contact"
           class="link-mobile"
-          @click="goEnd()"
-        >
+          @click="goEndPage()">
           <i class="inline-icon material-icons">email</i>
-          {{ language === 'pt-BR' ? 'Contato' : 'Contact' }}
+          {{ nav[lang].contact }}
         </a>
       </li>
     </ul>
@@ -100,34 +111,49 @@
 </template>
 
 <script>
-import { getDocumentLanguage } from '../helpers/index'
+import { getDocumentLanguage } from '../helpers'
+
 export default {
   name: 'Navbar',
   data () {
     return {
-      language: null
+      lang: null,
+      sidenav: null,
+      nav: {
+        en_us: {
+          home: 'About me',
+          projects: 'Projects',
+          skills: 'Skills',
+          contact: 'Contact-me'
+        },
+        pt_BR: {
+          home: 'Sobre mim',
+          projects: 'Projetos',
+          skills: 'Skills',
+          contact: 'Contato'
+        }
+      }
     }
   },
   methods: {
-    goEnd () {
-      // eslint-disable-next-line
-      $('html, body').animate({
-        // eslint-disable-next-line
-        scrollTop: $(document).height()
-      }, 500)
+    goEndPage () {
+      window.scrollTo(0, document.body.scrollHeight)
     }
   },
   created () {
-    this.language = getDocumentLanguage()
-    // eslint-disable-next-line
-    $(document).ready(function () {
-      // eslint-disable-next-line
-      $('.sidenav').sidenav()
-      // eslint-disable-next-line
-      $('.link-mobile').click(function () {
-        // eslint-disable-next-line
-        let instance = M.Sidenav.getInstance($('.sidenav'));
-        instance.close()
+    this.lang = getDocumentLanguage()
+  },
+  mounted () {
+    const elems = document.querySelectorAll('.sidenav')
+    /* eslint-disable no-undef */
+    M.Sidenav.init(elems, {})
+
+    this.sidenav = M.Sidenav.getInstance(elems[0])
+
+    // fechar todos os <router-link/>
+    document.querySelectorAll('.link-mobile').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        this.sidenav.close()
       })
     })
   }
@@ -142,7 +168,7 @@ export default {
   font-family: 'Kaushan Script', cursive;
 }
 
-.small{ font-size: 3rem!important; }
+.small{ font-size: 2rem!important; }
 
 .inline-icon {
   vertical-align: bottom;
@@ -158,6 +184,7 @@ export default {
   font-size: 1.5em;
   text-align: left;
   color: #fcfcfc;
+  cursor: pointer;
 }
 
 .sidenav{

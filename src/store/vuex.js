@@ -17,16 +17,16 @@ const store = new Vuex.Store({
     skills: []
   },
   mutations: {
-    loadAbout: (state, payload) => {
+    setAbout: (state, payload) => {
       state.about = payload
     },
-    loadProjects: (state, payload) => {
+    setProjects: (state, payload) => {
       state.projects = payload
     },
-    loadSkills: (state, payload) => {
+    setSkills: (state, payload) => {
       state.skills = payload
     },
-    loadContact: (state, payload) => {
+    setContact: (state, payload) => {
       state.contact = payload
     }
   },
@@ -38,20 +38,20 @@ const store = new Vuex.Store({
   },
   actions: {
     loadAbout: async ({ commit }) => {
-      let response = await listAbout()
-      commit('loadAbout', response.data)
+      const { data } = await listAbout()
+      commit('setAbout', data)
     },
     loadProjects: async ({ commit }) => {
-      let response = await listProjects()
-      commit('loadProjects', response.data)
+      const { data } = await listProjects()
+      commit('setProjects', data)
     },
     loadSkills: async ({ commit }) => {
-      let response = await listSkills()
-      commit('loadSkills', response.data)
+      const { data } = await listSkills()
+      commit('setSkills', data)
     },
     loadContact: async ({ commit }) => {
-      let response = await listContact()
-      commit('loadContact', response.data)
+      const { data } = await listContact()
+      commit('setContact', data)
     }
   }
 })

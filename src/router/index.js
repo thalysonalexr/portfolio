@@ -12,11 +12,7 @@ export default new Router({
   routes: [
     { path: '/', redirect: '/portfolio/' },
     { path: '/portfolio/', name: 'Home', component: Home },
-    {
-      path: '/portfolio/projects',
-      name: 'Projects',
-      component: Projects
-    },
+    { path: '/portfolio/projects', name: 'Projects', component: Projects },
     { path: '/portfolio/skills', name: 'Skills', component: Skills },
     { path: '/*', redirect: '/portfolio/' }
   ]
