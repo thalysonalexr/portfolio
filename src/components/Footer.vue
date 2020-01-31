@@ -4,22 +4,25 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">{{ contact.title }}</h5>
+            <h5 class="white-text">
+              {{ contact.title }}
+            </h5>
             <p class="apresentation grey-text text-lighten-4">
               {{ contact.apresentation }}
             </p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">{{ language === 'pt-BR' ? 'Contate-me' : 'Contact me' }}</h5>
+            <h5 class="white-text">
+              {{ footer[lang].title }}
+            </h5>
             <ul class="links-contact">
               <li v-for="(page, index) in contact.pages" :key="index">
                 <a
                   class="grey-text text-lighten-3"
-                  :href="page.type === 'Whatsapp' ? sendWhatsapp(page.link) : page.link"
+                  :href="page.link"
                   target="_blank"
-                  rel="noopener"
-                  :title="page.type"
-                >
+                  rel="noopener noreferrer"
+                  :title="page.type">
                   <i :class="page.class"></i>
                 </a>
               </li>
@@ -30,8 +33,10 @@
       <div class="footer-copyright">
         <div class="container">
         © {{ (new Date).getFullYear() }} Copyright {{ contact.name }}
-        <a @click="goBegin()" class="grey-text text-lighten-4 right" href="#!">
-          <i class="material-icons">keyboard_arrow_up</i>
+        <a @click="goBeginPage()" class="grey-text text-lighten-4 right" href="#!">
+          <i class="material-icons">
+            keyboard_arrow_up
+          </i>
         </a>
         </div>
       </div>
@@ -41,32 +46,38 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import { sendMessageWhatsapp } from '../http/services'
-import { getDocumentLanguage } from '../helpers/index'
+
+import { getDocumentLanguage } from '../helpers'
+
 export default {
   name: 'Footer',
   data () {
     return {
-      language: null
+      lang: null,
+      footer: {
+        en_US: {
+          title: 'Contact me'
+        },
+        pt_BR: {
+          title: 'Contate-me'
+        }
+      }
     }
   },
   computed: {
     ...mapGetters(['contact'])
   },
   methods: {
+    ...mapActions(['loadContact']),
     sendWhatsapp (to) {
       return sendMessageWhatsapp(to, 'Hello')
     },
-    ...mapActions(['loadContact']),
-    goBegin () {
-      // eslint-disable-next-line
-      $('html, body').animate({
-        scrollTop: 0
-      }, 500)
+    goBeginPage () {
+      window.scrollTo(0, document.body.scrollHeight)
     }
   },
   created () {
-    this.language = getDocumentLanguage()
+    this.lang = getDocumentLanguage()
     this.loadContact()
   }
 }

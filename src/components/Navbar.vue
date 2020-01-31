@@ -120,7 +120,7 @@ export default {
       lang: null,
       sidenav: null,
       nav: {
-        en_us: {
+        en_US: {
           home: 'About me',
           projects: 'Projects',
           skills: 'Skills',
