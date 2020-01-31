@@ -1,10 +1,15 @@
 <template>
-  <div id="header" class="container">
-    <header class="header">
+  <div
+    id="header"
+    class="container">
+    <header
+      class="header">
       <h1 class="title yellow darken-3 white-text z-depth-3">
         {{ title }}
       </h1>
-      <blockquote v-if="apresentation" class="title grey z-depth-3 lighten-5">
+      <blockquote
+        v-if="apresentation"
+        class="title grey z-depth-3 lighten-5">
         {{ apresentation }}
       </blockquote>
     </header>
@@ -18,12 +23,12 @@ export default {
     title: {
       type: String,
       required: false,
-      default: ''
+      default: null
     },
     apresentation: {
       type: String,
       required: false,
-      default: ''
+      default: null
     }
   }
 }
