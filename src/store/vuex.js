@@ -58,7 +58,10 @@ const store = new Vuex.Store({
       const { data } = await listContact()
       commit('setContact', data)
     },
-    getLanguage: () => (navigator.language || navigator.userLanguage) ? 'pt_BR' : 'en_US'
+    getLanguage: ({ commit }) => {
+      const lang = (navigator.language || navigator.userLanguage) ? 'pt_BR' : 'en_US'
+      commit('setLanguage', lang)
+    }
   }
 })
 
