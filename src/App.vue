@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <v-loading :is-loading=isLoading></v-loading>
-    <v-navbar></v-navbar>
+    <v-navbar/>
     <router-view/>
-    <v-footer></v-footer>
+    <v-footer/>
   </div>
 </template>
 
@@ -18,17 +17,6 @@ export default {
     'v-navbar': Navbar,
     'v-footer': Footer,
     'v-loading': Loading
-  },
-  data () {
-    return {
-      isLoading: true
-    }
-  },
-  created () {
-    let self = this
-    setTimeout(function () {
-      self.isLoading = false
-    }, 5000)
   }
 }
 </script>
