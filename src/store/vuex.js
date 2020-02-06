@@ -14,7 +14,8 @@ const store = new Vuex.Store({
     about: {},
     contact: {},
     projects: [],
-    skills: []
+    skills: [],
+    lang: null
   },
   mutations: {
     setAbout: (state, payload) => {
@@ -28,13 +29,17 @@ const store = new Vuex.Store({
     },
     setContact: (state, payload) => {
       state.contact = payload
+    },
+    setLanguage: (state, payload) => {
+      state.lang = payload
     }
   },
   getters: {
     about: state => state.about,
     contact: state => state.contact,
     projects: state => state.projects,
-    skills: state => state.skills
+    skills: state => state.skills,
+    lang: state => state.lang
   },
   actions: {
     loadAbout: async ({ commit }) => {
@@ -52,7 +57,8 @@ const store = new Vuex.Store({
     loadContact: async ({ commit }) => {
       const { data } = await listContact()
       commit('setContact', data)
-    }
+    },
+    getLanguage: () => (navigator.language || navigator.userLanguage) ? 'pt_BR' : 'en_US'
   }
 })
 

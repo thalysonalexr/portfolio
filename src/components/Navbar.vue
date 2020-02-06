@@ -141,7 +141,7 @@ export default {
     }
   },
   created () {
-    this.lang = getDocumentLanguage()
+    this.getLanguage()
   },
   mounted () {
     const elems = document.querySelectorAll('.sidenav')

@@ -47,8 +47,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-import { getDocumentLanguage } from '../helpers'
-
 export default {
   name: 'Footer',
   data () {
@@ -65,16 +63,16 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['contact'])
+    ...mapGetters(['contact', 'lang'])
   },
   methods: {
-    ...mapActions(['loadContact']),
+    ...mapActions(['loadContact', 'getLanguage']),
     goBeginPage () {
       window.scrollTo(0, document.body.scrollHeight)
     }
   },
   created () {
-    this.lang = getDocumentLanguage()
+    this.getLanguage()
     this.loadContact()
   }
 }
