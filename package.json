@@ -13,9 +13,7 @@
     "deploy -f": "npm run build; push-dir --dir=dist --branch=gh-pages --cleanup --force"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "axios": "^0.19.1",
     "jquery": "^3.4.1",
     "material-icons": "^0.3.1",
@@ -24,6 +22,7 @@
     "spinkit": "^2.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue-wait": "^1.4.8",
     "vuex": "^3.1.2"
   },
   "devDependencies": {
