@@ -16,7 +16,9 @@
               {{ footer[lang].title }}
             </h5>
             <ul class="links-contact">
-              <li v-for="(page, index) in contact.pages" :key="index">
+              <li
+                v-for="(page, index) in contact.pages"
+                :key="index">
                 <a
                   class="grey-text text-lighten-3"
                   :href="page.link"
@@ -51,7 +53,6 @@ export default {
   name: 'Footer',
   data () {
     return {
-      lang: null,
       footer: {
         en_US: {
           title: 'Contact me'
@@ -68,7 +69,7 @@ export default {
   methods: {
     ...mapActions(['loadContact', 'getLanguage']),
     goBeginPage () {
-      window.scrollTo(0, document.body.scrollHeight)
+      window.scrollTo(0, document.body.scrollTop)
     }
   },
   created () {

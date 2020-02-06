@@ -53,7 +53,7 @@
             <a
               :title="nav[lang].contact"
               class="link-mobile"
-              @click="goEnd()">
+              @click="goEndPage()">
               <i class="inline-icon material-icons">
                 email
               </i>
@@ -111,13 +111,12 @@
 </template>
 
 <script>
-import { getDocumentLanguage } from '../helpers'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Navbar',
   data () {
     return {
-      lang: null,
       sidenav: null,
       nav: {
         en_US: {
@@ -135,7 +134,11 @@ export default {
       }
     }
   },
+  computed: {
+    ...mapGetters(['lang'])
+  },
   methods: {
+    ...mapActions(['getLanguage']),
     goEndPage () {
       window.scrollTo(0, document.body.scrollHeight)
     }

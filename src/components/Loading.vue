@@ -1,15 +1,14 @@
 <template>
-  <span :title="isLoading"></span>
+  <span></span>
 </template>
 
 <script>
 import { pleaseWait } from 'please-wait'
 import 'please-wait/build/please-wait.css'
 import 'spinkit/spinkit.min.css'
-import { getDocumentLanguage } from '../helpers/index'
+
 export default {
   name: 'Loading',
-  props: ['isLoading'],
   data () {
     return {
       pleaseWaitInstance: null
@@ -23,23 +22,10 @@ export default {
   },
   methods: {
     updatePleaseWait () {
-      if (this.isLoading && this.pleaseWaitInstance == null) {
-        const logos = [
-          require('../assets/giphy/beetlejuice.gif'),
-          require('../assets/giphy/dumbbledore.gif'),
-          require('../assets/giphy/hey-arnold.gif'),
-          require('../assets/giphy/mr-bean.gif'),
-          require('../assets/giphy/simpsons.gif')
-        ]
-
-        let logo = logos[Math.floor(Math.random() * (logos.length - 0)) + 0]
-        let loadingMessage = getDocumentLanguage() === 'pt-BR' ? 'Aguarde. A página esta sendo carregada...' : 'Wait. The page is loading...'
-
+      if (this.pleaseWaitInstance == null) {
         this.pleaseWaitInstance = pleaseWait({
-          logo: logo,
-          backgroundColor: '#f57f17',
+          backgroundColor: '#ff7017',
           loadingHtml: `
-          <p class="loading-message">${loadingMessage}</p>
           <div class="sk-chase">
             <div class="sk-chase-dot"></div>
             <div class="sk-chase-dot"></div>
@@ -47,7 +33,9 @@ export default {
             <div class="sk-chase-dot"></div>
             <div class="sk-chase-dot"></div>
             <div class="sk-chase-dot"></div>
-          </div>`
+          </div>
+          <p class="loading-message">Carregando...</p>
+          `
         })
       }
       if (!this.isLoading && this.pleaseWaitInstance != null) {
@@ -60,26 +48,18 @@ export default {
 
 <style>
 
-.loading-message {
-  color: white!important;
-  font-size: 1.5rem;
-}
-
-div.sk-chase{
-  margin: 0 auto!important;
-}
+div.sk-chase{ margin: 0 auto!important; }
 
 :root{
-  --sk-color: #fcfcfc!important;
-  --sk-size: 70px;
+  --sk-color: #f5f5f5!important;
+  --sk-size: 40px;
 }
 
-.pg-loading-logo{
-  width: 350px;
-  border-radius: 350px;
-  border: 10px solid #fcfcfc;
-  -webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+.pg-loading-logo-header{ display: none!important; }
+
+.loading-message{
+  color: #f5f5f5;
+  margin-top: 30px;
 }
 
 </style>
