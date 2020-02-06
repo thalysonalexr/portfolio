@@ -1,51 +1,78 @@
 <template>
-  <div id="about" class="container">
-    <div class="skew bg-home">
-      <figure class="figure-perfil">
-        <img class="picture" :src="about.figure" alt="">
-      </figure>
-      <header class="header">
-        <h1 class="title">
-          {{ about.name }}
-        </h1>
-        <h2 class="title">
-          {{ about.description }}
-          <i class="far fa-dot-circle"></i>
-        </h2>
-      </header>
-    </div>
-    <section class="bio">
-      <div class="skew-2 about-me grey lighten-5 z-depth-3">
-        <h3 class="title title-about">
-          {{ language === 'pt-BR' ? 'Sobre mim' : 'About me' }}
-        </h3>
-        <article>
-          <p class="desc">{{ about.about_me }}</p>
-        </article>
+  <v-wait for="load home">
+    <template slot="waiting">
+      <v-loading/>
+    </template>
+    <div id="about" class="container">
+      <div class="skew bg-home">
+        <figure class="figure-perfil">
+          <img
+            class="picture"
+            :src="about.figure"
+            alt="Avatar">
+        </figure>
+        <header class="header">
+          <h1 class="title">
+            {{ about.name }}
+          </h1>
+          <h2 class="title">
+            {{ about.description }}
+            <i class="far fa-dot-circle"></i>
+          </h2>
+        </header>
       </div>
-    </section>
-  </div>
+      <section class="bio">
+        <div class="skew-2 about-me grey lighten-5 z-depth-3">
+          <h3 class="title title-about">
+            {{ home[lang].title }}
+          </h3>
+          <article>
+            <p class="desc">
+              {{ about.about_me }}
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </v-wait>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import { getDocumentLanguage } from '../../../helpers/index'
+
+import Loading from '../../components/Loading'
+
 export default {
   name: 'Home',
   data () {
     return {
-      language: null
+      home: {
+        pt_BR: {
+          title: 'Sobre mim'
+        },
+        en_US: {
+          title: 'About me'
+        }
+      }
     }
   },
+  components: {
+    'v-loading': Loading
+  },
   computed: {
-    ...mapGetters(['about'])
+    ...mapGetters(['about', 'lang'])
   },
   methods: {
-    ...mapActions(['loadAbout'])
+    ...mapActions(['loadAbout', 'getLanguage']),
+    async load () {
+      this.$wait.start('load home')
+      await this.loadAbout()
+      this.$wait.end('load home')
+    }
   },
   created () {
-    this.language = getDocumentLanguage()
-    this.loadAbout()
+    this.getLanguage()
+    this.load()
   }
 }
 </script>
@@ -152,7 +179,7 @@ h2.title{
 
 .bg-home{
   padding: 3%;
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../../assets/images/dest/bg.png');
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/dest/bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
