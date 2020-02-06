@@ -1,7 +1,8 @@
 import axios from 'axios'
-import { getDocumentLanguage } from '@/helpers/index'
 
-const uriBase = '/thalysonalexr/portfolio-files/master/data/compress/' + getDocumentLanguage()
+const lang = (navigator.language || navigator.userLanguage) ? 'pt_BR' : 'en_US'
+
+const uriBase = `/thalysonalexr/portfolio-files/master/data/compress/${lang}`
 
 const http = axios.create({
   baseURL: process.env.API,
