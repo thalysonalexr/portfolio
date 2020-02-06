@@ -13,6 +13,9 @@
     "deploy -f": "npm run build; push-dir --dir=dist --branch=gh-pages --cleanup --force"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
     "axios": "^0.19.1",
     "jquery": "^3.4.1",
     "material-icons": "^0.3.1",
