@@ -69,9 +69,6 @@ export default {
   },
   methods: {
     ...mapActions(['loadContact']),
-    sendWhatsapp (to) {
-      return sendMessageWhatsapp(to, 'Hello')
-    },
     goBeginPage () {
       window.scrollTo(0, document.body.scrollHeight)
     }
