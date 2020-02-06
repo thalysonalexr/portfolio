@@ -45,8 +45,8 @@
                     class="btn-floating btn-large waves-effect waves-light yellow darken-4 tooltipped"
                     target="_blank"
                     rel="noopener"
-                    :title="page[lang].visit + project.title">
-                    <i class="fa fa-external-link"></i>
+                    :title="page[lang].visit + ' ' +  project.title">
+                    <i class="fas fa-external-link-alt"></i>
                   </a>
                   <a
                     :href="project.source"
