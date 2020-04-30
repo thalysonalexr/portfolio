@@ -15,7 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "axios": "^0.19.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "material-icons": "^0.3.1",
     "materialize-css": "^1.0.0",
     "please-wait": "0.0.5",
