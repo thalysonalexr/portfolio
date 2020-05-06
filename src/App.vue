@@ -27,6 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: url('./assets/images/dest/bg-app.png') repeat;
+  background-image: url('./assets/images/bg-app.png');
+  background-repeat: repeat;
+  background-blend-mode: multiply;  
 }
 </style>

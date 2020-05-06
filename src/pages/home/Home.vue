@@ -79,63 +79,64 @@ export default {
 
 <style scoped>
 
-#about{
+#about {
   min-width: 100%;
   min-height: 100%;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 0 5%;
+  padding: 0 4%;
 }
 
-.desc{ font-weight: 300!important; }
+.desc { font-weight: 300!important; }
 
-.figure-perfil{
+.figure-perfil {
   margin: auto;
   width: 150px;
   transition: 300ms ease-in;
   padding-top: 5%;
 }
 
-img.picture{
+img.picture {
   width: 150px;
   height: 150px;
   border-radius: 150px;
   border: 5px solid #fcfcfc;
 }
 
-.title{
+.title {
   color: #fcfcfc !important;
   margin: 2%;
 }
 
-.title-about{
+.title-about {
   text-transform: uppercase;
   font-size: 1.5rem;
   text-align: left;
-  margin: 5% 0;
+  margin: 4% 0;
   color: #4A4E69 !important;
   font-weight: 700;
 }
 
-h1.title{
+h1.title {
   font-size: 2rem!important;
   font-weight: 700;
 }
 
-h2.title{
+h2.title {
   font-size: 1rem!important;
   font-style: italic;
   font-weight: 100;
 }
 
-.about-me{
+.about-me {
   padding: 5%;
+  border-radius: 10px;
   box-shadow: 3px 3px 4px 4px #4A4E69;
 }
 
-.bio article p{
+.bio article p {
   text-align: justify;
   color: #4A4E69 !important;
   font-weight: 100;
@@ -144,7 +145,7 @@ h2.title{
 }
 
 @media all and (min-width: 400px) {
-  img.picture{
+  img.picture {
     width: 170px;
     height: 170px;
     border-radius: 200px;
@@ -156,63 +157,61 @@ h2.title{
     padding-top: 2%;
   }
 
-  h1.title{
-    font-size: 2.5rem!important;
-  }
+  h1.title { font-size: 2.5rem!important; }
 
-  h2.title{
-    font-size: 1.5rem!important;
-  }
+  h2.title { font-size: 1.5rem!important; }
 }
 
-.skew{
+.skew {
   -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
   -ms-clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
   clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
 }
 
-.skew-2{
+.skew-2 {
   -ms-clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
   clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
   clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
 }
 
-.bg-home{
+.bg-home {
   padding: 3%;
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/dest/bg.png');
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/bg.gif');
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
+  background-position: center center;
 }
 
 @media all and (min-width: 560px) {
-  img.picture{
+  img.picture {
     width: 200px;
     height: 200px;
     border-radius: 200px;
   }
 
-  .figure-perfil{
+  .figure-perfil {
     margin: auto;
     width: 200px;
     padding-top: 0%;
   }
 
-  h1.title{
-    font-size: 2.5rem!important;
-  }
+  h1.title{ font-size: 2.5rem!important; }
 
-  h2.title{
-    font-size: 1.3rem!important;
-  }
+  h2.title { font-size: 1.3rem!important; }
 
-  .bio article p{
-    line-height: 2.5rem;
-  }
+  .bio article p { line-height: 2.5rem; }
 }
 
 @media all and (min-width: 992px) {
-  #about{ padding: 0 10%; }
+  #about { padding: 0 10%; }
+
+  .title-about {
+    font-size: 2rem;
+    margin: 2% 0;
+  }
+
+  .bio article p { font-size: 1.5rem; }
 }
 
 </style>

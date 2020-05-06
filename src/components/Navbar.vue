@@ -1,6 +1,6 @@
 <template>
   <div id="navbar">
-    <nav class="nav-extended yellow darken-3">
+    <nav class="nav-extended color-primary">
       <div class="nav-wrapper">
         <router-link
           :to="{ path: '/portfolio/' }"
@@ -63,7 +63,7 @@
         </ul>
       </div>
     </nav>
-    <ul class="sidenav yellow darken-4" id="mobile-demo">
+    <ul class="sidenav color-primary" id="mobile-demo">
       <li>
         <router-link
           :to="{ path: '/portfolio/' }"
@@ -166,7 +166,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
 
-.brand-logo{
+.brand-logo {
   font-size: 2rem;
   font-family: 'Kaushan Script', cursive;
 }
@@ -176,27 +176,28 @@ export default {
 .inline-icon {
   vertical-align: bottom;
   display: inline-block;
+  color: #fcfcfc!important;
 }
 
-.nav-wrapper li a{
+.nav-wrapper li a {
   font-size: 1rem;
   text-transform: uppercase;
 }
 
-.link-mobile{
+.link-mobile {
   font-size: 1.5em;
   text-align: left;
   color: #fcfcfc;
   cursor: pointer;
 }
 
-.sidenav{
-  background-image: linear-gradient(270deg, rgba(245, 127, 23, 0.5)), url('../assets/images/bg-app.png');
+.sidenav {
+  background-image: linear-gradient(270deg, rgba(25, 50, 60, 0.5)), url('../assets/images/bg-app.png');
   background-repeat: repeat;
   background-blend-mode: multiply;
 }
 
-.sidenav li{
+.sidenav li {
   margin-top: 5%;
   margin-bottom: 5%;
 }

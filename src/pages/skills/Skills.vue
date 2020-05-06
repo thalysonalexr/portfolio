@@ -4,10 +4,6 @@
       <v-loading/>
     </template>
     <div id="skills">
-      <v-header
-        :title="skills.title"
-        :apresentation="skills.apresentation">
-      </v-header>
       <section class="container">
         <div
           v-for="(skill, index) in skills.all"
@@ -42,13 +38,11 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-import Header from '../../components/Header'
 import Loading from '../../components/Loading'
 
 export default {
   name: 'Skills',
   components: {
-    'v-header': Header,
     'v-loading': Loading
   },
   computed: {
@@ -70,15 +64,15 @@ export default {
 
 <style scoped>
 
-.title-group{
-  color: #f57f17;
+.title-group {
+  color: #19323C;
   font-weight: 100;
   border-bottom: 1px solid #ddd;
   padding-bottom: 2%;
   margin-bottom: 4%;
 }
 
-.skill-figure{
+.skill-figure {
   margin: 0 auto;
   max-height: 70px;
   padding-bottom: 10px;
@@ -87,25 +81,27 @@ export default {
   display: table-cell;
 }
 
-.title-tool{
+.title-tool {
   font-size: 1.2rem;
   text-align: center;
   width: 100%;
 }
 
-.container-skill{ padding: 5%; }
+.card{ border-radius: 10px; }
+
+.container-skill { padding: 5%; }
 
 @media all and (min-width: 440px) {
-  .skill-figure{ max-height: 80px; }
+  .skill-figure { max-height: 80px; }
 }
 
 @media all and (min-width: 540px) {
-  .skill-figure{ max-height: 90px; }
+  .skill-figure { max-height: 90px; }
 }
 
 @media all and (min-width: 600px) {
-  .skill-figure{ max-height: 100px; }
-  .container-skill{ padding: 2% 3%; }
+  .skill-figure { max-height: 100px; }
+  .container-skill { padding: 2% 3%; }
 }
 
 </style>

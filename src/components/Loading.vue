@@ -24,7 +24,7 @@ export default {
     updatePleaseWait () {
       if (this.pleaseWaitInstance == null) {
         this.pleaseWaitInstance = pleaseWait({
-          backgroundColor: '#ff7017',
+          backgroundColor: '#19323C',
           loadingHtml: `
           <div class="sk-chase">
             <div class="sk-chase-dot"></div>
@@ -48,16 +48,16 @@ export default {
 
 <style>
 
-div.sk-chase{ margin: 0 auto!important; }
+div.sk-chase { margin: 0 auto!important; }
 
-:root{
+:root {
   --sk-color: #f5f5f5!important;
   --sk-size: 40px;
 }
 
-.pg-loading-logo-header{ display: none!important; }
+.pg-loading-logo-header { display: none!important; }
 
-.loading-message{
+.loading-message {
   color: #f5f5f5;
   margin-top: 30px;
 }

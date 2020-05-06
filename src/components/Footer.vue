@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <footer class="page-footer yellow darken-3 skew">
+    <footer class="page-footer color-primary skew">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -34,12 +34,16 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-        © {{ (new Date).getFullYear() }} Copyright {{ contact.name }}
-        <a @click="goBeginPage()" class="grey-text text-lighten-4 right" href="#!">
-          <i class="material-icons">
-            keyboard_arrow_up
-          </i>
-        </a>
+          © {{ (new Date).getFullYear() }} Copyright {{ contact.name }}
+          <a
+            @click="goBeginPage()"
+            class="grey-text text-lighten-4 right"
+            title="Voltar ao topo"
+            href="#!">
+            <i class="material-icons">
+              keyboard_arrow_up
+            </i>
+          </a>
         </div>
       </div>
     </footer>
@@ -81,9 +85,7 @@ export default {
 
 <style scoped>
 
-.page-footer{
-  background-color: #e2e2e2;
-}
+.page-footer { background-color: #e2e2e2; }
 
 .skew {
   -webkit-clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
@@ -91,26 +93,30 @@ export default {
   clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.links-contact li{
+.links-contact li {
   display: inline-block;
   padding: 2%;
 }
 
-.links-contact a{
+.links-contact a {
   font-size: 1.2rem;
 }
 
-.links-contact a i{
+.links-contact a i {
   font-size: 2rem;
   transition: transform 300ms ease;
 }
 
-.links-contact a i:hover{
+.links-contact a i:hover {
   transform: scale(1.5,1.5);
 }
 
-.apresentation{
-  text-align: justify;
+.apresentation { text-align: justify; }
+
+.footer-copyright{
+  margin: 0 2rem;
+  padding: 2rem;
+  border-top: 1px solid rgba(252, 252, 252, 0.2);
 }
 
 </style>

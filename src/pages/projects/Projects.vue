@@ -4,10 +4,6 @@
       <v-loading/>
     </template>
     <div id="projects">
-      <v-header
-        :title="projects.title"
-        :apresentation="projects.apresentation">
-      </v-header>
       <section class="container">
         <div class="row">
           <div
@@ -69,7 +65,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-import Header from '../../components/Header'
 import Loading from '../../components/Loading'
 
 export default {
@@ -91,7 +86,6 @@ export default {
     }
   },
   components: {
-    'v-header': Header,
     'v-loading': Loading
   },
   computed: {
@@ -114,16 +108,18 @@ export default {
 
 <style scoped>
 
-.desc{ font-weight: 300; }
+.desc { font-weight: 300; }
 
-.specs{ padding: 5%; }
+.specs { padding: 5%; }
 
-.specs li{
+.card { border-radius: 10px; }
+
+.specs li {
   text-align: left;
   list-style-type: disc!important;
 }
 
-.card-content p{
+.card-content p {
   font-size: 1rem;
   text-align: justify;
   line-height: 1.2rem;
@@ -131,15 +127,18 @@ export default {
   overflow: hidden;
 }
 
-.card.medium .card-image{
+.card.medium .card-image {
   height: 200px!important;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-title{ color: #f57f17!important; }
+.card-title {
+  color: #19323C!important;
+  font-weight: 700;
+}
 
-.card-action a{ margin: 0 5%; }
+.card-action a { margin: 0 5%; }
 
 </style>
