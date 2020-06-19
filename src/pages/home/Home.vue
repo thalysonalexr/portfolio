@@ -3,7 +3,7 @@
     <template slot="waiting">
       <v-loading/>
     </template>
-    <div id="about" class="container">
+    <div v-if="about" id="about" class="container">
       <div class="skew bg-home">
         <figure class="figure-perfil">
           <img
@@ -34,13 +34,17 @@
         </div>
       </section>
     </div>
+    <div v-else>
+      <v-error />
+    </div>
   </v-wait>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-import Loading from '../../components/Loading'
+import Error from '@/components/Error'
+import Loading from '@/components/Loading'
 
 export default {
   name: 'Home',
@@ -57,6 +61,7 @@ export default {
     }
   },
   components: {
+    'v-error': Error,
     'v-loading': Loading
   },
   computed: {
@@ -64,6 +69,7 @@ export default {
   },
   methods: {
     ...mapActions(['loadAbout', 'getLanguage']),
+
     async load () {
       this.$wait.start('load home')
       await this.loadAbout()
@@ -176,7 +182,7 @@ h2.title {
 
 .bg-home {
   padding: 3%;
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/bg.gif');
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.7)), url('../../assets/images/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;

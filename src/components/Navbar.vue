@@ -1,6 +1,6 @@
 <template>
   <div id="navbar">
-    <nav class="nav-extended color-primary">
+    <nav class="nav-extended">
       <div class="nav-wrapper">
         <router-link
           :to="{ path: '/portfolio/' }"
@@ -26,27 +26,29 @@
               <i class="inline-icon material-icons">
                 star
               </i>
-              {{ nav[lang].home }}
+              <span>{{ nav[lang].home }}</span>
             </router-link>
           </li>
           <li>
             <router-link
               :to="{ path: '/portfolio/projects' }"
-              :title="nav[lang].projects">
+              :title="nav[lang].projects"
+              class="link-mobile">
               <i class="inline-icon material-icons">
                 work
               </i>
-              {{ nav[lang].projects }}
+              <span>{{ nav[lang].projects }}</span>
             </router-link>
           </li>
           <li>
             <router-link
               :to="{ path: '/portfolio/skills' }"
-              :title="nav[lang].skills">
+              :title="nav[lang].skills"
+              class="link-mobile">
               <i class="inline-icon material-icons">
                 code
               </i>
-              {{ nav[lang].skills }}
+              <span>{{ nav[lang].skills }}</span>
             </router-link>
           </li>
           <li>
@@ -57,13 +59,13 @@
               <i class="inline-icon material-icons">
                 email
               </i>
-              {{ nav[lang].contact }}
+              <span>{{ nav[lang].contact }}</span>
             </a>
           </li>
         </ul>
       </div>
     </nav>
-    <ul class="sidenav color-primary" id="mobile-demo">
+    <ul class="sidenav" id="mobile-demo">
       <li>
         <router-link
           :to="{ path: '/portfolio/' }"
@@ -191,10 +193,13 @@ export default {
   cursor: pointer;
 }
 
+nav.nav-extended { background-color: var(--color-primary); }
+
 .sidenav {
   background-image: linear-gradient(270deg, rgba(25, 50, 60, 0.5)), url('../assets/images/bg-app.png');
   background-repeat: repeat;
   background-blend-mode: multiply;
+  background-color: var(--color-primary);
 }
 
 .sidenav li {

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueWait from 'vue-wait'
+
 import App from './App'
 import router from './router'
 import { store } from '@/store/vuex'
@@ -12,6 +13,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 import 'materialize-css/dist/js/materialize.min.js'
 
 Vue.config.productionTip = false
+
 Vue.use(Style)
 Vue.use(FontAwesome)
 Vue.use(VueWait)

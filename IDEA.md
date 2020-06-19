@@ -8,7 +8,6 @@
 
 * Sobre
 * Contato
-* Ensino
 * Projetos
 * Skill
 

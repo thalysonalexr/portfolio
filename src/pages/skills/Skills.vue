@@ -3,10 +3,10 @@
     <template slot="waiting">
       <v-loading/>
     </template>
-    <div id="skills">
+    <div v-if="skills.length" id="skills">
       <section class="container">
         <div
-          v-for="(skill, index) in skills.all"
+          v-for="(skill, index) in skills"
           :key="index"
           class="card hoverable">
           <div class="card-content">
@@ -32,17 +32,22 @@
         </div>
       </section>
     </div>
+    <div v-else>
+      <v-error />
+    </div>
   </v-wait>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-import Loading from '../../components/Loading'
+import Error from '@/components/Error'
+import Loading from '@/components/Loading'
 
 export default {
   name: 'Skills',
   components: {
+    'v-error': Error,
     'v-loading': Loading
   },
   computed: {
@@ -50,6 +55,7 @@ export default {
   },
   methods: {
     ...mapActions(['loadSkills']),
+
     async load () {
       this.$wait.start('load skills')
       await this.loadSkills()
@@ -63,6 +69,10 @@ export default {
 </script>
 
 <style scoped>
+
+.container-skill {
+  max-width: 150px;
+}
 
 .title-group {
   color: #19323C;
@@ -85,6 +95,7 @@ export default {
   font-size: 1.2rem;
   text-align: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .card{ border-radius: 10px; }
@@ -100,8 +111,16 @@ export default {
 }
 
 @media all and (min-width: 600px) {
-  .skill-figure { max-height: 100px; }
+  .skill-figure { max-height: 60px; }
   .container-skill { padding: 2% 3%; }
+  .title-tool { display: none; }
+}
+
+@media all and (min-width: 790px) {
+  .container-skill { min-width: 140px; }
+  .skill-figure { max-height: 80px; }
+  .container-skill { padding: 2% 3%; }
+  .title-tool { display: block; }
 }
 
 </style>

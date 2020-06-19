@@ -1,13 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --color-primary: #7159c1;
+  --color-secundary: #372b5e;
+  --color-white: #fcfcfc;
+  --color-grey: #2c3e50;
+  --font-primary: 'Karla', sans-serif;
+}
 
 * {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-primary);
 }
-
-.font-inter { font-family: 'Inter', sans-serif; }
-
-.color-primary { background-color: #19323C!important; }

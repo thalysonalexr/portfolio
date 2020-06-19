@@ -5,7 +5,7 @@ import {
   listProjects,
   listSkills,
   listContact
-} from '@/http/services'
+} from '@/services/api'
 
 Vue.use(Vuex)
 
@@ -44,19 +44,19 @@ const store = new Vuex.Store({
   actions: {
     loadAbout: async ({ commit }) => {
       const { data } = await listAbout()
-      commit('setAbout', data)
+      commit('setAbout', data.user)
     },
     loadProjects: async ({ commit }) => {
       const { data } = await listProjects()
-      commit('setProjects', data)
+      commit('setProjects', data.projects)
     },
     loadSkills: async ({ commit }) => {
       const { data } = await listSkills()
-      commit('setSkills', data)
+      commit('setSkills', data.skills)
     },
     loadContact: async ({ commit }) => {
       const { data } = await listContact()
-      commit('setContact', data)
+      commit('setContact', data.contact)
     },
     getLanguage: ({ commit }) => {
       const lang = (navigator.language || navigator.userLanguage) ? 'pt_BR' : 'en_US'

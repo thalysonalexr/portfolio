@@ -9,14 +9,12 @@
 <script>
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Loading from './components/Loading'
 
 export default {
   name: 'App',
   components: {
     'v-navbar': Navbar,
-    'v-footer': Footer,
-    'v-loading': Loading
+    'v-footer': Footer
   }
 }
 </script>
@@ -29,6 +27,6 @@ export default {
   color: #2c3e50;
   background-image: url('./assets/images/bg-app.png');
   background-repeat: repeat;
-  background-blend-mode: multiply;  
+  background-blend-mode: multiply;
 }
 </style>

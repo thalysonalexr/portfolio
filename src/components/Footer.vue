@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <footer class="page-footer color-primary skew">
+    <footer class="page-footer skew">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -72,6 +72,7 @@ export default {
   },
   methods: {
     ...mapActions(['loadContact', 'getLanguage']),
+
     goBeginPage () {
       window.scrollTo(0, document.body.scrollTop)
     }
@@ -85,7 +86,7 @@ export default {
 
 <style scoped>
 
-.page-footer { background-color: #e2e2e2; }
+.page-footer { background-color: var(--color-primary); }
 
 .skew {
   -webkit-clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
