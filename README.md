@@ -39,7 +39,7 @@ Neste ano percebi a necessidade de trabalhar mais no marketing pessoal, desta ma
 
   <img width="250" style="margin-right: 10px"  src="./docs/skills.png" alt="Página Skills" title="Página Skills">
 
-</dib>
+</div>
 
 ## :rocket: Como instalar e executar?
 
