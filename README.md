@@ -1,5 +1,3 @@
-# portfolio.me
-
 <h1 align="center">portfolio.me</h1>
 <p align="center">Template responsivo para portfólio de desenvolvedor Web/Mobile desenvolvido com Vue.js, materialize e Github Pages.:heavy_check_mark:</p>
 
